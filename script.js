@@ -11,9 +11,19 @@ window.onscroll = function() {
 }
 
 // Butonul de pe pagina principala (cu form) - animatie cand e apasat
-var button = document.getElementById("turn");
+window.onload=function(){
+	let button = document.getElementById("button");
+	let form = document.getElementById("form");
+	let container = document.querySelector(".button-container");
 
-button.addEventListener("click", function() {
-	document.getElementById("btn-cnt").classList.toggle("button-container2");
-	button.style.display.none; // visibility
-});
+	button.addEventListener("mousedown", function() {
+		button.classList.add("disappear");
+		form.classList.add("active");
+		container.classList.add("plus")
+	});
+
+	form.addEventListener("submit", function(event) {
+		event.preventDefault();
+		// Extra cod pentru submissions
+	});
+}

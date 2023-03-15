@@ -23,7 +23,7 @@
 }
 
 #page {
-   
+    background-color: lightgray;
 }
 
 header {
@@ -35,11 +35,12 @@ header {
     top: 0;
     z-index: 10;
     background: rgb(22, 1, 49);
-    transition: top 0.75s ease-in-out;
+    transition: top 0.5s ease-in-out;
 }
 
 .hide {
     top: -150px;
+    opacity: 0.8;
 }
 
 #logo1 {
@@ -98,7 +99,7 @@ main {
 .overlay p {
     position: absolute;
     top: 40%;
-    right: 100;
+    right: 10%;
     z-index: 1;
     color: white;
     font-size: 80;
@@ -106,107 +107,90 @@ main {
     animation-name: appear;
 }
 
-.button-container {
-    position: absolute;
-    top: 500px;
-    left: 20%;
-    z-index: 1;
-    color: white;
-}
-
-.button-container button {
-    width: 400px;
-    height: 75px;
-    border-radius: 25px;
-    background-color: #280095;
-    color: #fff;
-    font-size: 20px;
-    border: none;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-}
-
-.button-container .button {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    z-index: 1; 
-}
-
-.button-container button:hover {
-    background-color: #6231a5;
-}
-
-.button-container button form {
-    position: absolute;
-    top: -100;
-    left: 0;
-    z-index: 3;
-    display: none;
-}
-
-.button-container {
-    display: block;
-}
-
-.button-container2 {
-    display: inline-block;
-    outline: none;
-    animation-name: flip;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    display: none;
-}
-
-.button-container .animate button:focus form {
-    display: block;
-}
-
-@keyframes flip {
-    from {
-        transform: rotateY(0deg);
-    }
-    to {
-        transform: rotateY(360deg);
-    }
-}
-
-.button span {
+#button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
-    padding-top: 6px;
-    font-size: 37;
+    font-size: 45;
+    padding-bottom: 3px;
 }
 
-.button span:after {
-    content: '\00bb';
+#button span:after {
+    content: '\00bb\00bb\00bb';
     position: absolute;
     opacity: 0;
     right: -20px;
     transition: 0.5s;
 }
   
-.button:hover span {
-    padding-right: 40px;
+#button:hover span {
+    padding-right: 85px;
 }
   
-.button:hover span:after {
+#button:hover span:after {
     opacity: 1;
     right: 0;
 }
 
-form {
-    width: 100%;
+#button:hover {
+    background-color: #6231a5;
+    box-shadow: inset 0px 0px 2px 4px #280095;
+}
+
+.button-container {
+    position: absolute;
+    top: 500;
+    left: 20%;
+    z-index: 1;
+}
+
+.button-container.plus {
+    top: 353;
+    left: 17%;
+}
+
+#button {
+    width: 420px;
+    height: 90px;
+    border-radius: 25px;
+    background-color: #280095;
+    box-shadow: inset 0px 0px 2px 4px #6231a5;
+    color: #fff;
+    border: 5px solid #04738f;
+    cursor: pointer;
+}
+
+#button.disappear {
+    display: none;
+}
+
+
+
+/* BOX SHADOWS AND OTHER DESIGN STUFF FOR FORM AND BUTTONS AND STUFF */
+
+
+
+
+#form {
+    width: 200%;
+    height: 200%;
     margin: 0 auto;
     text-align: center;
-    background-color: #f6f6f6;
+    background-color: rgb(28, 16, 131);
+    box-shadow: inset 0px 3px 13px -3px rgba(13,200,255,0.65);
     padding: 30px;
+    border: 3px solid #4d13b8;
     border-radius: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+#form.active {
+    transform: rotateY(-360deg);
+    opacity: 1;
+    visibility: visible;
 }
   
 .form-group {
@@ -216,9 +200,10 @@ form {
   
 label {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.9rem;
     margin-bottom: 10px;
-    color: #46344e;
+    color: #2685df;
+    text-shadow: 3px 5px 2px #474747, 2px 2px 2px rgba(29,172,206,0);
     font-weight: bold;
 }
   
@@ -236,12 +221,12 @@ input[type="text"], input[type="email"] {
   
 input[type="text"]:focus, input[type="email"]:focus {
     outline: none;
-    box-shadow: 0px 0px 5px #c5b7d8;
-    background-color: #e3d9e3;
+    box-shadow: 0px 0px 5px #bea8dd;
+    background-color: #aa9fd1;
     color: #573e68;
 }
   
-input[type="text"]:valid + label, input[type="email"]:valid + label {
+/*input[type="text"]:valid + label, input[type="email"]:valid + label {
     position: absolute;
     top: -15px;
     left: 10px;
@@ -252,20 +237,24 @@ input[type="text"]:valid + label, input[type="email"]:valid + label {
     border-radius: 5px;
     transition: all 0.3s ease;
 }
+*/
   
-form #submit {
-    background-color: #e16342;
+input[type="submit"] {
+    width: 40%;
+    background-color: #1a0958;
     color: #fff;
     padding: 10px 20px;
-    border: none;
+    border: 2px solid #0b757c;
+    box-shadow: 0px 3px 13px -3px #0b757c;
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
   
-form #submit:hover {
-    background-color: #bd4a2b;
+input[type="submit"]:hover {
+    background-color: #215e14;
+    box-shadow: 0px 3px 13px -3px #215e14;
 }
 
 @keyframes appear {
