@@ -10,10 +10,10 @@ window.onscroll = function() {
 	prevScrollpos = currentScrollPos;
 }
 
-// Buttonul de pe pagina principala (cu form) - animatie cand e apasat
-var button = document.querySelector("button");
+// Butonul de pe pagina principala (cu form) - animatie cand e apasat
+var button = document.getElementById("turn");
 
 button.addEventListener("click", function() {
-    button.focus();
+	document.getElementById("btn-cnt").classList.toggle("button-container2");
+	button.style.display.none; // visibility
 });
-

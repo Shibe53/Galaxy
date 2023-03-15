@@ -108,61 +108,61 @@ main {
 
 .button-container {
     position: absolute;
-    top: 40%;
-    left: 100;
-    width: 100%;
+    top: 500px;
+    left: 20%;
     z-index: 1;
     color: white;
 }
 
 .button-container button {
-    width: 200px;
-    height: 50px;
+    width: 400px;
+    height: 75px;
     border-radius: 25px;
-    background-color: #333;
+    background-color: #280095;
     color: #fff;
     font-size: 20px;
     border: none;
-    cursor: pointer;
     transform-style: preserve-3d;
     transition: transform 1s;
 }
 
-.button-container button:focus {
-    outline: none;
-    animation-name: flip;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.button-container button .front {
+.button-container .button {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    z-index: 1;
+    z-index: 1; 
 }
 
-.button-container button .back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    transform: rotateY(180deg);
-    z-index: 2;
+.button-container button:hover {
+    background-color: #6231a5;
 }
 
 .button-container button form {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    top: -100;
+    left: 0;
     z-index: 3;
     display: none;
+}
+
+.button-container {
+    display: block;
+}
+
+.button-container2 {
+    display: inline-block;
+    outline: none;
+    animation-name: flip;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    display: none;
+}
+
+.button-container .animate button:focus form {
+    display: block;
 }
 
 @keyframes flip {
@@ -174,24 +174,13 @@ main {
     }
 }
 
-.button-container button:focus .front {
-    display: none;
-}
-
-.button-container button:focus .back {
-    display: none;
-}
-
-.button-container button:focus form {
-    display: block;
-}
-
 .button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
-    padding-top: 8px;
+    padding-top: 6px;
+    font-size: 37;
 }
 
 .button span:after {
@@ -203,7 +192,7 @@ main {
 }
   
 .button:hover span {
-    padding-right: 25px;
+    padding-right: 40px;
 }
   
 .button:hover span:after {
@@ -212,7 +201,7 @@ main {
 }
 
 form {
-    max-width: 500px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     background-color: #f6f6f6;
@@ -264,7 +253,7 @@ input[type="text"]:valid + label, input[type="email"]:valid + label {
     transition: all 0.3s ease;
 }
   
-form button {
+form #submit {
     background-color: #e16342;
     color: #fff;
     padding: 10px 20px;
@@ -275,7 +264,7 @@ form button {
     transition: all 0.3s ease;
 }
   
-form button:hover {
+form #submit:hover {
     background-color: #bd4a2b;
 }
 
