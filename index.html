@@ -26,7 +26,7 @@
       
       </head>
     <body>
-        <div id="page">
+        <div id="page" style="background: linear-gradient(180deg, rgba(16,2,24,1) 0%, rgba(40,13,103,1) 50%, rgba(16,2,24,1) 100%);">
             <header>
 
               <a href="index.html">
@@ -74,15 +74,19 @@
                   <form id="form">
                     <div class="form-group">
                       <label for="name">Nume:</label>
-                      <input type="text" id="name" name="name" placeholder="Introdu numele" required>
+                      <input type="text" name="name" placeholder="Introdu numele" required>
                     </div>
                       
                     <div class="form-group">
                       <label for="email">Email:</label>
-                      <input type="email" id="email" name="email" placeholder="Introdu email" required>
+                      <input type="email" name="email" placeholder="Introdu email" required>
                     </div>
                       
                     <input type="submit"></input>
+
+                    <p>Mulțumim că v-ați alăturat echipei noastre!
+                    <br>Vă rugăm apăsați pe linkul din <br>mailul de confirmare pentru a putea începe pregătirea.
+                    <br>Spor la treabă! :)</p>
                   </form>
 
                 </div>
@@ -98,7 +102,6 @@
             <div id="cards">
 
               <div class="card">
-                <img src="qmark.png">
 
                 <div class="card-container">
                   <h4><b>De ce Galaxy?</b></h4> 
@@ -108,52 +111,52 @@
               </div>
 
               <div class="card">
-                <img src="book.png">
 
                 <div class="card-container">
                   <h4><b>Povestea noastră</b></h4> 
-                  <p style="line-height: 2;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> 
+                  <p style="line-height: 2;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
                 </div>
 
               </div>
 
               <div class="card">
-                <img src="event.png">
 
                 <div class="card-container">
                   <h4><b>Evenimente</b></h4> 
-                  <p style="line-height: 2;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> 
+                  <p style="line-height: 2;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
                 </div>
 
               </div>
 
             </div>
 
-            <div id="content">
+            <div id="btn-cnt">
 
-              <div class="card-container">
-                <h4><b>Povestea noastră</b></h4> 
-                  <p style="line-height: 2;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-              </div>
+              <button id="button1" class="button">SERVICII</button>
 
-              <hr>
+              <button id="button2" class="button">PROGRAME</button>
 
-              <div class="card-container">
-                <h4><b>Povestea noastră</b></h4> 
-                  <p style="line-height: 2;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-              </div>
+              <button id="button3" class="button">METODE</button>
 
             </div>
+
+            <div id="txt-cnt">
+              <p id="text1" class="text hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p id="text2" class="text hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p id="text3" class="text hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+            <button id="back-button" class="hidden">Back</button>
+
             <div id="footer">
               
             </div>
