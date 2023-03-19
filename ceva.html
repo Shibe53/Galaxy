@@ -3,101 +3,58 @@
 
 <head>
 	<style>
-		.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+		#footer {
+    background: linear-gradient(rgb(46, 17, 179) 0%, rgb(23, 43, 160) 35%, rgb(31, 89, 175) 100%);
+    height: 250px;
+    margin-top: 200px;
+    bottom: 50px;
 }
 
-.button {
-  margin: 0 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.heading {
+    font-size: 2em;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
 }
 
-.text {
-  margin: 20px auto;
-  padding: 20px;
-  font-size: 20px;
-  background-color: #f8f8f8;
-  border-radius: 5px;
-  text-align: center;
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    color: white;
 }
 
-.hidden {
-  display: none;
+.image {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 150px;
+    height: auto;
+    margin-right: 50px;
+    text-align: center;
 }
 
-#back-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.paragraph {
+    font-size: 1.5em;
+    margin-top: 50px;
+    color: white;
 }
-
-#back-button:hover {
-  background-color: #d0d0d0;
-}
-
 	</style>
 </head>
 
 <body>
-	<div class="button-container">
-    <button id="button1" class="button">Button 1</button>
-    <button id="button2" class="button">Button 2</button>
-    <button id="button3" class="button">Button 3</button>
+	<div id="footer">
+    <p class="heading">
+      NOI SUNTEM AICI PENTRU TINE!
+    </p>
+
+    <div class="image-container">
+      <img class="image" src="logo.jpeg">
+    <p class="paragraph">
+      Copyright © 2023 CONSTELATIA CONSTRUCT
+    </p>
   </div>
-  
-  <div id="text-container">
-    <p id="text1" class="text hidden">This is the text for Button 1.</p>
-    <p id="text2" class="text hidden">This is the text for Button 2.</p>
-    <p id="text3" class="text hidden">This is the text for Button 3.</p>
-  </div>
-  
-  <button id="back-button" class="hidden">Back</button>
 
-  <script>
-    const buttons = document.querySelectorAll('.button');
-const texts = document.querySelectorAll('.text');
-const backButton = document.getElementById('back-button');
-
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    texts.forEach(text => {
-      if (text.id === `text${button.id.slice(-1)}`) {
-        text.classList.remove('hidden');
-      } else {
-        text.classList.add('hidden');
-      }
-    });
-    buttons.forEach(btn => {
-      if (btn.id !== button.id) {
-        btn.style.display = 'none';
-      }
-    });
-    backButton.classList.remove('hidden');
-  });
-});
-
-backButton.addEventListener('click', () => {
-  texts.forEach(text => {
-    text.classList.add('hidden');
-  });
-  buttons.forEach(button => {
-    button.style.display = 'block';
-  });
-  backButton.classList.add('hidden');
-});
-
-  </script>
-  
+</div>
 </body>
 </html>
