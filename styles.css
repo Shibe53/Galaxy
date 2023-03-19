@@ -6,7 +6,7 @@
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 16px;
 }
   
 ::-webkit-scrollbar-track {
@@ -15,11 +15,15 @@
   
 ::-webkit-scrollbar-thumb {
     background: rgb(22, 1, 49);
+    border: 3px solid transparent;
+    border-radius: 110px;
+    background-clip: content-box;
 }
   
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(135, 44, 255);
     opacity: 50%;
+    background-clip: content-box;
 }
 
 header {
